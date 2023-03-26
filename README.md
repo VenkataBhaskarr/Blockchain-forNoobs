@@ -48,8 +48,22 @@ Objective -  creating a airdrop website
 1. user enters the recipeint public address and the amount he wants and click on submit 
 2. usually how this would happen in cli is 
 spl-token transfer <MINT_ADDRESS> <AMOUNT> <RECIPEINT_ADDRESS>
+3. but we will do the same using web3.js sdk
+the code is 
 
-3. 
+```
+ const newConnection = new solanaWeb3.Connection('https://api.devnet.solana.com', 'confirmed');
+ const requestAirdrop = () => {
+    // if (!connection || !keyPair) return;
+    const airdropAmount = solanaWeb3.LAMPORTS_PER_SOL; // 1 SOL
+    const pubkee = new solanaWeb3.PublicKey("jhvgh");
+    connection.requestAirdrop(pubkee, airdropAmount).then(() => {
+      console.log(`Airdrop successful!`);
+    }).catch((error) => {
+      console.error(`Airdrop failed: ${error}`);
+    });
+  };
+```
 
 
 ## Assignment 2
