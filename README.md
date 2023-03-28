@@ -51,6 +51,9 @@ spl-token transfer <MINT_ADDRESS> <AMOUNT> <RECIPEINT_ADDRESS>
 3. but we will do the same using web3.js sdk
 the code is 
 
+
+
+
 ```
  const newConnection = new solanaWeb3.Connection('https://api.devnet.solana.com', 'confirmed');
  const requestAirdrop = () => {
@@ -63,6 +66,7 @@ the code is
       console.error(`Airdrop failed: ${error}`);
     });
   };
+  
 ```
 
 
