@@ -53,7 +53,7 @@ the code is
 
 
 
-
+```
 ```
  const newConnection = new solanaWeb3.Connection('https://api.devnet.solana.com', 'confirmed');
  const requestAirdrop = () => {
